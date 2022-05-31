@@ -15,5 +15,22 @@ namespace NiceTry.Controllers
         {
             return View();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
