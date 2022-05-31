@@ -1,0 +1,32 @@
+﻿@model IEnumerable<NiceTry.Models.GuestResponse>
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Список людей, которые пойдут на вечеринку:</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>phone</th>
+            </tr>
+            </thead>
+        <tbody>
+        @foreach(NiceTry.Models.GuestResponse x in Model)
+        {
+            <tr>
+                <td>@x.name</td>
+                <td>@x.phone</td>
+            </tr>
+        }
+        </tbody>
+        </table>
+    </body>
+</html>

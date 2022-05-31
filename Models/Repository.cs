@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-
+﻿
+using System.Collections.Generic;
 namespace NiceTry.Models
 {
     public class Repository
     {
-        private static List<GuestResponce> responses = new List<GuestResponce>();
-        public static IEnumerable<GuestResponce> Responses
+        private static List<GuestResponse> responses = new List<GuestResponse>();
+        public static IEnumerable<GuestResponse> Responses
         {
             get
             {
@@ -14,7 +14,7 @@ namespace NiceTry.Models
         }
 
 
-        public static void AddResponce(GuestResponce response)
+        public static void AddResponce(GuestResponse response)
         {
             responses.Add(response);
         }

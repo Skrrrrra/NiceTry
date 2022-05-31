@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace NiceTry.Controllers
 {
     public class HomeController : Controller
@@ -16,25 +17,32 @@ namespace NiceTry.Controllers
             return View();
         }
 
-        public IActionResult SecondPage()
-        {
-            return View();
-        }
-
+        
 
         [HttpGet]
-        public ViewResult rsvpform()
+        public ViewResult SecondPage()
         {
             return View();
         }
 
         [HttpPost]
-        public ViewResult RsvpForm(GuestResponce guestResponce)
+        public ViewResult SecondPage(GuestResponse guestResponce)
         {
-            Repository.AddResponce(guestResponce);
-            return View("Thanks", guestResponce);
+            if (ModelState.IsValid)
+            {
+                Repository.AddResponce(guestResponce);
+                return View("Thanks", guestResponce);
+            }
+            else 
+            {
+                return View();
+            }
 
-
+        }
+        
+        public ViewResult ListResponses()
+        {
+            return View(Repository.Responses.Where( r => r.willAttend == true));
         }
 
     }

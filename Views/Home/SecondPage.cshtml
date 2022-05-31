@@ -1,4 +1,4 @@
-﻿@model NiceTry.Models.GuestResponce
+﻿@model NiceTry.Models.GuestResponse
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -8,7 +8,8 @@
         <title>Document</title>
     </head>
     <body>
-        <form asp-action="rsvpform" method="post">
+        <form asp-action="SecondPage" method="post">
+            <div asp-validation-summary=All></div>
             <p>
                 <label asp-for="name">Your name:</label>
                 <input asp-for="name" />
