@@ -16,21 +16,26 @@ namespace NiceTry.Controllers
             return View();
         }
 
+        public IActionResult SecondPage()
+        {
+            return View();
+        }
 
 
+        [HttpGet]
+        public ViewResult rsvpform()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponce guestResponce)
+        {
+            Repository.AddResponce(guestResponce);
+            return View("Thanks", guestResponce);
 
 
-
-
-
-
-
-
-
-
-
-
-
+        }
 
     }
 }

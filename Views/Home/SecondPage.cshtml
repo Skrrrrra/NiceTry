@@ -1,0 +1,36 @@
+﻿@model NiceTry.Models.GuestResponce
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form asp-action="rsvpform" method="post">
+            <p>
+                <label asp-for="name">Your name:</label>
+                <input asp-for="name" />
+            </p>
+            <p>
+                <label asp-for="email">Your email:</label>
+                <input asp-for="email" />
+            </p>
+            <p>
+                <label asp-for="phone">Your phone:</label>
+                <input asp-for="phone" />
+            </p>
+            <label>Will you attend?</label>
+            <p>
+                <select asp-for="willAttend">
+                    <option value="">Choose an option</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+
