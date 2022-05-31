@@ -9,7 +9,9 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-    color: #2a8cfa;
+    color: #0366d6;
+    font-size: 30px;
+    text-decoration: none;
     font-size: 30px;
     text-decoration: none;
 }
@@ -79,6 +81,7 @@ body {
 p {
     font-size: 30px;
     color: #fff;
+    height: auto;
 }
 
 #square {

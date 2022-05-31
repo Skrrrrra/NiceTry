@@ -3,12 +3,18 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+             <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <environment include="Development">
+               <link rel="stylesheet" href="~/css/site.css" />
+        </environment>
+        <environment exclude="Development">
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment>
     </head>
     <body>
-        <form asp-action="SecondPage" method="post">
+        <form asp-action="SecondPage" method="post" id="square">
             <div asp-validation-summary=All></div>
             <p>
                 <label asp-for="name">Your name:</label>
