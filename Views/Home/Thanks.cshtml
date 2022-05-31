@@ -1,28 +1,35 @@
 ﻿@model NiceTry.Models.GuestResponce
-@{
-Layout = null;
-}
-
 <!DOCTYPE html/>
 <html>
-    <head>
-
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
     <body>
-        <p>
-            <h1>Thank you, </h1>
-            @if(Model.willAttend == true)
-            {
-                @:That is great you are coming
-            }
-            else
-            {
-                @:So sad
-            }
-        </p>
-        <p>
-            Click
-            <a asp-action="ListResponses">here</a>
-        </p>
+        <div id="square">
+            <p>
+                <h1>Thank you, </h1>
+                @if (Model.willAttend == true)
+                {
+                    @:That is great you are coming
+                }
+                else
+                {
+                    @:So sad
+                }
+            </p>
+            <p>
+                Click
+                <a asp-action="ListResponses">here</a>
+            </p>
+        </div>
     </body>
 </html>

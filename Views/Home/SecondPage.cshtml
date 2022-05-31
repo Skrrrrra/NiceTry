@@ -6,9 +6,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <environment include="Development">
+               <link rel="stylesheet" href="~/css/site.css" />
+        </environment>
+        <environment exclude="Development">
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment>
     </head>
     <body>
-        <form asp-action="rsvpform" method="post">
+        <form asp-action="rsvpform" method="post" id="square">
             <p>
                 <label asp-for="name">Your name:</label>
                 <input asp-for="name" />
@@ -24,13 +30,12 @@
             <label>Will you attend?</label>
             <p>
                 <select asp-for="willAttend">
-                    <option value="">Choose an option</option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
+                    <option value="" >Choose an option</option>
+                    <option value="true" >Yes</option>
+                    <option value="false" >No</option>
                 </select>
             </p>
             <button type="submit">Submit</button>
         </form>
     </body>
 </html>
-
