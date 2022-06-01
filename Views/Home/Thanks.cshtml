@@ -6,19 +6,12 @@ Layout = null;
 <!DOCTYPE html/>
 <html>
     <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <environment include="Development">
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
-</head>
-    <body>
-         <div id="square">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thanks</title>
+        <link rel="stylesheet" href = "~/lib/bootstrap/dist/css/bootstrap.css"/>
+    </head>
+    <body class = "text-center">
         <p>
             <h1>Thank you, @Model.name </h1>
             @if(Model.willAttend == true)
@@ -34,6 +27,5 @@ Layout = null;
             Click
             <a asp-action="ListResponses">here</a> to see who is coming
         </p>
-        </div>
     </body>
 </html>

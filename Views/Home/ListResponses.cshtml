@@ -9,24 +9,29 @@
 <html>
     <head>
         <title>Список людей, которые пойдут на вечеринку:</title>
+        <link rel="stylesheet" href = "~/lib/bootstrap/dist/css/bootstrap.css"/>
     </head>
     <body>
-        <table>
-            <thead>
-            <tr>
-                <th>name</th>
-                <th>phone</th>
-            </tr>
-            </thead>
-        <tbody>
-        @foreach(NiceTry.Models.GuestResponse x in Model)
-        {
-            <tr>
-                <td>@x.name</td>
-                <td>@x.phone</td>
-            </tr>
-        }
-        </tbody>
-        </table>
+        <div class="panel-body">
+            <table class = "table table-sm table-striped table-bordered">
+                <thead>
+                    <tr>
+                    <th>name</th>
+                    <th>phone</th>
+                    <th>email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(NiceTry.Models.GuestResponse x in Model)
+                    {
+                        <tr>
+                            <td>@x.name</td>
+                            <td>@x.phone</td>
+                            <td>@x.email</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

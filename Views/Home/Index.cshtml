@@ -3,15 +3,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <environment include="Development">
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+    <link rel="stylesheet" href = "/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div id="square">
-        <a asp-action="SecondPage">RSVP</a>
+    <div class="center">
+        <h1>Next week we will got the party. If u see that u was invite</h1>
+        <h3><a class="btn btn-primary" asp-action="SecondPage">RSVP</a></h3>
     </div>
 </body>

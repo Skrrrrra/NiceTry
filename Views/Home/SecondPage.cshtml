@@ -6,38 +6,48 @@
              <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <environment include="Development">
-               <link rel="stylesheet" href="~/css/site.css" />
-        </environment>
-        <environment exclude="Development">
-            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        </environment>
+            <link rel="stylesheet" href="~/css/Styles.css"/>
+            <link rel="stylesheet" href = "~/lib/bootstrap/dist/css/bootstrap.css" />
     </head>
     <body>
-        <form asp-action="SecondPage" method="post" id="square">
-            <div asp-validation-summary=All></div>
-            <p>
-                <label asp-for="name">Your name:</label>
-                <input asp-for="name" />
-            </p>
-            <p>
-                <label asp-for="email">Your email:</label>
-                <input asp-for="email" />
-            </p>
-            <p>
-                <label asp-for="phone">Your phone:</label>
-                <input asp-for="phone" />
-            </p>
-            <label>Will you attend?</label>
-            <p>
-                <select asp-for="willAttend">
-                    <option value="">Choose an option</option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-            </p>
-            <button type="submit">Submit</button>
-        </form>
+        <div class = "panel panel-success">
+            <div class = "panel-heading text-center"><h4>Complete the form to continue</h4></div>
+                <div class="panel-body">
+                     <form asp-action="SecondPage" method="post" id="square">
+                        <div asp-validation-summary=All></div>
+                           
+                                <div class="form-group">
+                                    <label asp-for="name">Your name:</label>
+                                    <input class="form-control" asp-for="name" />
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label asp-for="email">Your email:</label>
+                                    <input class="form-control" asp-for="email" />
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label asp-for="phone">Your phone:</label>
+                                    <input class="form-control" asp-for="phone" />
+                                </div>
+                            
+                                <label>Will you attend?</label>
+                            
+                                <div class="form-group">
+                                    <select asp-for="willAttend">
+                                    <option value="">Choose an option</option>
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                    </select>
+                                </div>
+                            
+                            <div class ="text-center">
+                        <button type="submit">Submit</button>
+                            </div>
+                    </form>
+                </div>
+        </div>
+        
     </body>
 </html>
 
